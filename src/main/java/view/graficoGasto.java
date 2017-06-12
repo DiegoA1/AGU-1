@@ -29,7 +29,7 @@ public class graficoGasto extends javax.swing.JFrame{
 
     public graficoGasto(Principal vp, Proceso pr) {
         this.pr = pr;
-        edu();
+        conteoMes();
         this.Vp = vp;
         initComponent();
        
@@ -73,7 +73,7 @@ public class graficoGasto extends javax.swing.JFrame{
                
     }
     
-    public void leer (String mes, int m){
+    public void sumaGastoMes (String mes, int m){
         System.out.println("mes: "+ mes);
         for (int i = 0; i < pr.cantidadRegistro() ; i++) {
             System.out.println("algo: "+pr.obtenerRegistro(i).getgFecha().split("-")[1]);
@@ -85,7 +85,7 @@ public class graficoGasto extends javax.swing.JFrame{
         
     }
     
-    public void edu (){
+    public void conteoMes (){
         
         for (int i = 0; i < 12; i++) {
             String mes = null;
@@ -94,7 +94,7 @@ public class graficoGasto extends javax.swing.JFrame{
             }else{
                 mes = String.valueOf(i+1);
             }
-            leer(mes, i);
+            sumaGastoMes(mes, i);
             
         }
     }
