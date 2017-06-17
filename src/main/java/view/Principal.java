@@ -24,7 +24,7 @@ import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 
-public class Principal extends JFrame {
+public class Principal extends JFrame {//AgregarQUARTZ 
 
     private Gasto g;
     private Proceso pr;
@@ -280,6 +280,8 @@ public class Principal extends JFrame {
     }
 
     public void graficoGasto() {//Falta por hacer//<-----------------------------------------------
+        this.dispose();
+        graficoGasto gG = new graficoGasto(this, pr);
 
     }
 }
